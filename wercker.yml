@@ -3,7 +3,7 @@ box:
 build:
   steps:
     - script:
-        code: echo "hello, world!"
+        code: nproc
 
 hello-again:
   box: ubuntu
